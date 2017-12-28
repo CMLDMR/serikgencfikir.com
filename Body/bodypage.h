@@ -3,10 +3,24 @@
 
 #include <QtCore/qglobal.h>
 
-class BodyPage : public WContainerWidget
-{
-public:
-    BodyPage();
-};
+#include <Wt/WContainerWidget.h>
+
+using namespace Wt;
+
+
+
+namespace Body {
+
+
+    class BodyPage : public WContainerWidget
+    {
+    public:
+        BodyPage();
+    };
+
+
+}
+
+
 
 #endif // BODYPAGE_H

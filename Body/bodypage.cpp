@@ -1,6 +1,9 @@
 #include "bodypage.h"
 
-BodyPage::BodyPage()
+
+
+Body::BodyPage::BodyPage()
+    :WContainerWidget()
 {
 
 }

@@ -7,6 +7,8 @@
 #include <Wt/WContainerWidget.h>
 #include <Wt/WEnvironment.h>
 #include <Wt/WJavaScript.h>
+#include <Wt/WText.h>
+#include <Wt/WVBoxLayout.h>
 
 #include <Wt/WBootstrapTheme>
 
@@ -15,7 +17,11 @@
 #include <mongocxx/instance.hpp>
 
 
-#include "singleton.h"
+#include "Footer/maincontainer.h"
+#include "intro/intropage.h"
+#include "Body/bodypage.h"
+
+
 
 #include <iostream>
 #include <memory>
@@ -35,41 +41,12 @@ public:
     MainApplication(const WEnvironment& env);
 
 
-    ///
-    /// \brief start initializing www.mogat.eu web.
-    ///
-    void initMogat();
 
-    ///
-    /// \brief ViewPortDimension
-    /// \return
-    /// Emit Signal that captured browserviewport Dimensions like Width and Height.
-    JSignal<int,int,double>& ViewPortDimension();
+    void startupPage();
 
 
 
-    JSignal<int>& OrientationChanged();
-
-
-    JSignal<float>& PixelRatio();
-
-
-    ///
-    /// \brief f_whChanged
-    /// \param w
-    /// \param h
-    /// Slot for Capturing Dimension of the Browser.
-    void f_whChanged(int w, int h, double r);
-
-
-    ///
-    /// \brief run Javascript code for get browser dimension
-    ///
-    void getDimensionfBrowser();
-
-
-    void f_OrientationChanged();
-
+    void initPage();
 
 
 
@@ -82,14 +59,8 @@ private:
     std::shared_ptr<Wt::WBootstrapTheme> p_wtTheme;
 
 
-    int viewPortWidth, viewPortHeight;
-    double viewPortPixelRatio;
 
-    JSignal<int,int, double> whChanged;
-
-    JSignal<int> _OrientationChanged;
-
-    JSignal<float> _PixelRatio;
+    Intro::introPage* mIntroPage;
 
 
 };

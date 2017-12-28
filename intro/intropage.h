@@ -3,10 +3,31 @@
 
 #include <QtCore/qglobal.h>
 
-class introPage : public WContainerWidget
-{
-public:
-    introPage();
-};
+#include <Wt/WContainerWidget.h>
+#include <Wt/WImage.h>
+#include <Wt/WVBoxLayout.h>
+#include <Wt/WSignal.h>
+#include <Wt/WCssDecorationStyle.h>
+
+
+using namespace Wt;
+
+
+
+namespace Intro {
+
+    class introPage : public WContainerWidget
+    {
+    public:
+        introPage();
+
+        Signal<NoClass> Click;
+    };
+
+}
+
+
+
+
 
 #endif // INTROPAGE_H
