@@ -14,7 +14,6 @@ Intro::introPage::introPage()
 
     auto img = layout->addWidget(cpp14::make_unique<WImage>(WLink("img/intrologo.png")),0,AlignmentFlag::Center|AlignmentFlag::Middle);
 
-
     img->decorationStyle().setCursor(Cursor::PointingHand);
 
 

@@ -20,6 +20,9 @@
 #include "Footer/maincontainer.h"
 #include "intro/intropage.h"
 #include "Body/bodypage.h"
+#include "Header/headerpage.h"
+
+#include "Body/projekeys.h"
 
 
 
@@ -61,6 +64,10 @@ private:
 
 
     Intro::introPage* mIntroPage;
+
+
+    mongocxx::client* mClient;
+    mongocxx::database db;
 
 
 };

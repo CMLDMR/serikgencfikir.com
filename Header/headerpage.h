@@ -3,10 +3,29 @@
 
 #include <QtCore/qglobal.h>
 
-class HeaderPage : public WContainerWidget
-{
-public:
-    HeaderPage();
-};
+
+
+#include <Wt/WContainerWidget.h>
+#include <Wt/WText.h>
+#include <Wt/WCssDecorationStyle.h>
+
+
+#include "bootstrap.h"
+
+using namespace Wt;
+
+
+
+namespace Header {
+
+    class HeaderPage : public WContainerWidget
+    {
+    public:
+        HeaderPage();
+    };
+
+}
+
+
 
 #endif // HEADERPAGE_H

@@ -10,6 +10,9 @@
 #include <Wt/WPushButton.h>
 #include <Wt/WHBoxLayout.h>
 #include <Wt/WGridLayout.h>
+#include <Wt/WSignal.h>
+#include <Wt/WCssDecorationStyle.h>
+#include <Wt/WAnchor.h>
 
 
 
@@ -27,6 +30,13 @@ namespace Footer {
         MainContainer();
 
         WToolBar* mToolBar;
+
+        Signal<NoClass> AnaSayfa;
+        Signal<NoClass> serikGencFikir;
+        Signal<NoClass> Oduller;
+        Signal<NoClass> YarismaKosullari;
+        Signal<NoClass> OrnekTaslak;
+        Signal<NoClass> Basvuru;
     };
 
 

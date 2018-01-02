@@ -1,5 +1,7 @@
 QT -= gui
 
+QT += core xml
+
 CONFIG += c++14 console
 CONFIG -= app_bundle
 
@@ -21,7 +23,8 @@ SOURCES += main.cpp \
     mainapplication.cpp \
     Footer/maincontainer.cpp \
     intro/intropage.cpp \
-    Body/bodypage.cpp
+    Body/bodypage.cpp \
+    Header/headerpage.cpp
 
 
 
@@ -67,7 +70,9 @@ HEADERS += \
     mainapplication.h \
     Footer/maincontainer.h \
     intro/intropage.h \
-    Body/bodypage.h
+    Body/bodypage.h \
+    Header/headerpage.h \
+    Body/projekeys.h
 
 
 INCLUDEPATH += $$PWD/../../Boost/boost
