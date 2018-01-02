@@ -32,7 +32,7 @@ MainApplication::MainApplication(const Wt::WEnvironment &env)
     root()->addStyleClass(Bootstrap::Grid::container_fluid);
 
     try {
-        mClient = new mongocxx::client(mongocxx::uri("mongodb://GencFikir:SeRikGencFikirrAsssisin@192.168.0.215:27018/?authSource=SERIKGENCFIKIR"));
+        mClient = new mongocxx::client(mongocxx::uri(administratorObj));
         db = mClient->database(ProjeKeys::DB);
     } catch (mongocxx::exception &e) {
         std::cout << e.what() << std::endl;
